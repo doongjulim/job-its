@@ -1,0 +1,36 @@
+# 시험·발표·접수 일정 + 과목별 주간 공부 목표
+# kind: EXAM(시험) | RESULT(발표) | REGISTRATION(접수) | ETC
+# D-30, D-7, D-3, D-1, D-DAY 아침 브리핑에서 알려줍니다.
+
+events:
+  - name: 제81회 한국사능력검정시험
+    date: 2026-11-28
+    kind: EXAM
+    memo: 10:00까지 입실
+  - name: 한능검 81회 합격 발표
+    date: 2026-12-11
+    kind: RESULT
+  - name: TOEIC 진단 응시
+    date: 2026-12-27
+    kind: EXAM
+  - name: TOEIC 정기시험
+    date: 2027-01-16
+    kind: EXAM
+  - name: 상반기 공채 시즌 시작(예상)
+    date: 2027-03-02
+    kind: ETC
+
+# 주간 목표(분). from/until 사이에만 활성화됩니다.
+studyPlans:
+  - subject: 한국사
+    weeklyGoalMinutes: 900
+    until: 2026-11-28
+  - subject: TOEIC
+    weeklyGoalMinutes: 540
+    from: 2026-11-29
+  - subject: NCS
+    weeklyGoalMinutes: 360
+    from: 2026-11-29
+  - subject: 정보처리기사
+    weeklyGoalMinutes: 300
+    from: 2027-01-01

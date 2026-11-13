@@ -1,0 +1,11 @@
+# 지원 현황 트래커
+# stage: 관심 | 서류 | 필기 | 면접 | 최종합격 | 불합격
+# deadline 이 7일 안이면 브리핑에 뜹니다. nextDate 는 필기·면접 날짜.
+
+applications:
+  - institution: (예시) 한국OO공사
+    title: 2027 상반기 신입 전산직
+    stage: 관심
+    deadline:
+    nextDate:
+    memo: 공고 뜨면 deadline 채우기

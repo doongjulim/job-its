@@ -1,0 +1,49 @@
+{
+  "resultCode": 200,
+  "resultMsg": "성공했습니다.",
+  "totalCount": 3,
+  "result": [
+    {
+      "recrutPblntSn": 290001,
+      "instNm": "한국전력공사",
+      "recrutPbancTtl": "2027년 상반기 대졸수준 신입사원(ICT) 채용",
+      "pbancBgngYmd": "20270302",
+      "pbancEndYmd": "20270316",
+      "ncsCdNmLst": "정보통신",
+      "hireTypeNmLst": "정규직",
+      "workRgnNmLst": "전남,서울",
+      "recrutSeNm": "신입",
+      "recrutNope": "30",
+      "srcUrl": "https://job.alio.go.kr/recruitview.do?idx=290001",
+      "ongoingYn": "Y"
+    },
+    {
+      "recrutPblntSn": 290002,
+      "instNm": "국민연금공단",
+      "recrutPbancTtl": "전산직 경력 채용",
+      "pbancBgngYmd": "20270301",
+      "pbancEndYmd": "20270310",
+      "ncsCdNmLst": "정보통신,사업관리",
+      "hireTypeNmLst": "정규직",
+      "workRgnNmLst": "전북",
+      "recrutSeNm": "경력",
+      "recrutNope": "5",
+      "srcUrl": "https://job.alio.go.kr/recruitview.do?idx=290002",
+      "ongoingYn": "Y"
+    },
+    {
+      "recrutPblntSn": 290003,
+      "instNm": "한국도로공사",
+      "recrutPbancTtl": "2026년 하반기 IT 신입 채용",
+      "pbancBgngYmd": "20261001",
+      "pbancEndYmd": "20261015",
+      "ncsCdNmLst": "정보통신",
+      "hireTypeNmLst": "정규직",
+      "workRgnNmLst": "경북",
+      "recrutSeNm": "신입",
+      "recrutNope": "8",
+      "srcUrl": null,
+      "ongoingYn": "N"
+    }
+  ]
+}
