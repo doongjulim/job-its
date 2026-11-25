@@ -9,6 +9,7 @@ import com.dongju.jobits.job.FetchAlioRecruitmentClient;
 import com.dongju.jobits.job.FixtureRecruitmentSource;
 import com.dongju.jobits.job.ParseRecruitmentService;
 import com.dongju.jobits.job.RecruitmentSearchCondition;
+import com.dongju.jobits.job.RecruitmentSource;
 import com.dongju.jobits.notify.ConsoleNotifier;
 import com.dongju.jobits.notify.JsonPoster;
 import com.dongju.jobits.notify.NotificationDispatcher;
@@ -71,9 +72,16 @@ public class JobItsApp {
 
     private static void run(Map<String, String> env, LocalDate today) throws Exception {
         JobItsConfig config = new LoadConfigService(CONFIG_DIR).load();
-        ParseRecruitmentService parser = new ParseRecruitmentService();
-        AlioRecruitmentSource source = new AlioRecruitmentSource(
-                new FetchAlioRecruitmentClient(env.get("ALIO_API_KEY")), parser, 5);
+        String apiKey = env.get("ALIO_API_KEY");
+        RecruitmentSource source;
+        if (apiKey == null || apiKey.isBlank()) {
+            // 키가 없어도 일정·공부·지원현황 카드는 만들고, 공고 수집만 건너뛴다
+            System.out.println("::warning title=ALIO_API_KEY 없음::공고 수집을 건너뜁니다. "
+                    + "Settings > Secrets and variables > Actions 에 ALIO_API_KEY 를 등록하세요.");
+            source = condition -> List.of();
+        } else {
+            source = new AlioRecruitmentSource(new FetchAlioRecruitmentClient(apiKey), new ParseRecruitmentService(), 5);
+        }
         NotificationDispatcher dispatcher = NotificationDispatcher.fromEnvironment(env, JsonPoster.http());
         System.out.println("[잡있으] " + today + " · 알림 채널: " + dispatcher.channelNames());
 

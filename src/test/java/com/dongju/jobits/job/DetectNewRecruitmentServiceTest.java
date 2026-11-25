@@ -39,6 +39,17 @@ class DetectNewRecruitmentServiceTest {
     }
 
     @Test
+    void 상태_파일이_있어도_비어_있으면_첫_실행으로_본다() throws Exception {
+        Path file = dir.resolve("empty.json");
+        SeenRecruitmentStore empty = new SeenRecruitmentStore(file).load();
+        empty.save();                                   // 공고 0건으로 돌았던 날
+
+        SeenRecruitmentStore store = new SeenRecruitmentStore(file).load();
+        DetectNewRecruitmentService.Result result = new DetectNewRecruitmentService(store).detect(List.of(m("1")));
+        assertTrue(result.firstRun());
+    }
+
+    @Test
     void 일련번호가_없으면_기관_제목_마감일로_키를_만든다() {
         Recruitment noId = Fixtures.recruitment("", "한국전력공사", "전산", END);
         assertEquals("k:한국전력공사|전산|2026-12-01", DetectNewRecruitmentService.keyOf(noId));

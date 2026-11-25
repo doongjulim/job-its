@@ -27,7 +27,7 @@ public class SeenRecruitmentStore {
     private final Path file;
     private final ObjectMapper mapper = new ObjectMapper();
     private final LinkedHashSet<String> keys = new LinkedHashSet<>();
-    private boolean existedBefore;
+    private boolean firstRun;
 
     public SeenRecruitmentStore(Path file) {
         this.file = file;
@@ -35,18 +35,20 @@ public class SeenRecruitmentStore {
 
     public SeenRecruitmentStore load() throws IOException {
         keys.clear();
-        existedBefore = Files.exists(file);
-        if (!existedBefore) return this;
-        JsonNode root = mapper.readTree(file.toFile());
-        for (JsonNode key : root.path("keys")) {
-            keys.add(key.asText());
+        if (Files.exists(file)) {
+            JsonNode root = mapper.readTree(file.toFile());
+            for (JsonNode key : root.path("keys")) {
+                keys.add(key.asText());
+            }
         }
+        // 파일이 없거나, 있어도 비어 있으면(예: API 키 없이 돌던 기간) 첫 실행으로 본다
+        firstRun = keys.isEmpty();
         return this;
     }
 
-    /** 상태 파일이 없던 첫 실행인가 — 첫 실행엔 기존 공고를 전부 '새 공고'로 알리지 않는다. */
+    /** 본 공고가 하나도 없던 첫 실행인가 — 첫 실행엔 기존 공고를 전부 '새 공고'로 알리지 않는다. */
     public boolean isFirstRun() {
-        return !existedBefore;
+        return firstRun;
     }
 
     public boolean contains(String key) {
