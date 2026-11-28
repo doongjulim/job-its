@@ -1,0 +1,26 @@
+<svg width="500" height="290" viewBox="0 0 500 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="잡있으 일정과 공부">
+<style>
+  svg { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI", Helvetica, Arial, sans-serif; }
+  .title { font-size: 15px; font-weight: 600; fill: rgb(72, 148, 224); }
+  .sub { font-size: 11px; fill: rgb(145, 145, 145); }
+  .head { font-size: 12px; font-weight: 600; fill: rgb(139, 139, 139); }
+  .name { font-size: 13px; font-weight: 600; fill: rgb(139, 139, 139); }
+  .text { font-size: 12px; fill: rgb(145, 145, 145); }
+  .small { font-size: 11px; fill: rgb(145, 145, 145); }
+  .accent { fill: rgb(72, 148, 224); font-weight: 600; }
+  .warn { fill: rgb(229, 83, 75); font-weight: 600; }
+  .row { animation: fadeIn 0.5s ease-in-out backwards; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+<rect x="0.5" y="0.5" rx="6" width="499" height="289" fill="none" stroke="#8B8B8B22"/>
+<text x="20" y="32" class="title">잡있으 · 일정 &amp; 공부</text>
+<text x="20" y="52" class="sub">2027 상반기 공기업 전산직 합격</text>
+<text x="20" y="86" class="head">다가오는 일정</text>
+<g class="row" style="animation-delay: 0ms"><text x="20" y="108" class="text warn">D-DAY</text><text x="84" y="108" class="text">제81회 한국사능력검정시험</text><text x="480" y="108" class="small" text-anchor="end">11/28 · 시험</text></g>
+<g class="row" style="animation-delay: 120ms"><text x="20" y="132" class="text accent">D-13</text><text x="84" y="132" class="text">한능검 81회 합격 발표</text><text x="480" y="132" class="small" text-anchor="end">12/11 · 발표</text></g>
+<g class="row" style="animation-delay: 240ms"><text x="20" y="156" class="text accent">D-29</text><text x="84" y="156" class="text">TOEIC 진단 응시</text><text x="480" y="156" class="small" text-anchor="end">12/27 · 시험</text></g>
+<g class="row" style="animation-delay: 360ms"><text x="20" y="180" class="text accent">D-49</text><text x="84" y="180" class="text">TOEIC 정기시험</text><text x="480" y="180" class="small" text-anchor="end">1/16 · 시험</text></g>
+<g class="row" style="animation-delay: 480ms"><text x="20" y="204" class="text accent">D-94</text><text x="84" y="204" class="text">상반기 공채 시즌 시작(예상)</text><text x="480" y="204" class="small" text-anchor="end">3/2 · 일정</text></g>
+<text x="20" y="234" class="head">이번 주 공부</text>
+<g class="row" style="animation-delay: 600ms"><text x="20" y="261" class="text">한국사</text><rect x="120" y="252" width="260" height="10" rx="5" fill="rgba(139, 139, 139, 0.2)"/><text x="480" y="261" class="small" text-anchor="end">0h / 15h (0%)</text></g>
+</svg>

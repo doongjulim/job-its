@@ -1,0 +1,19 @@
+<svg width="500" height="132" viewBox="0 0 500 132" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="잡있으 맞춤 공고">
+<style>
+  svg { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI", Helvetica, Arial, sans-serif; }
+  .title { font-size: 15px; font-weight: 600; fill: rgb(72, 148, 224); }
+  .sub { font-size: 11px; fill: rgb(145, 145, 145); }
+  .head { font-size: 12px; font-weight: 600; fill: rgb(139, 139, 139); }
+  .name { font-size: 13px; font-weight: 600; fill: rgb(139, 139, 139); }
+  .text { font-size: 12px; fill: rgb(145, 145, 145); }
+  .small { font-size: 11px; fill: rgb(145, 145, 145); }
+  .accent { fill: rgb(72, 148, 224); font-weight: 600; }
+  .warn { fill: rgb(229, 83, 75); font-weight: 600; }
+  .row { animation: fadeIn 0.5s ease-in-out backwards; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+<rect x="0.5" y="0.5" rx="6" width="499" height="131" fill="none" stroke="#8B8B8B22"/>
+<text x="20" y="32" class="title">잡있으 · 맞춤 공고</text>
+<text x="20" y="52" class="sub">2026-11-28 기준 · 접수 중 0건 · 새 공고 0건</text>
+<text x="20" y="98" class="text">조건에 맞는 접수 중 공고가 없어요</text>
+</svg>
